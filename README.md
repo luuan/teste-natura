@@ -74,9 +74,9 @@ A documentação da API pode ser acessada através do endpoint `/api` quando a a
 Se você deseja contribuir com este projeto, por favor, siga os passos abaixo:
 
 1. Faça um fork do repositório.
-2. Crie uma branch para a sua feature (`git checkout -b feature/nova-feature`).
+2. Crie uma branch para a sua feature (`git checkout -b feat/nome-da-feature`).
 3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`).
-4. Push para a branch (`git push origin feature/nova-feature`).
+4. Push para a branch (`git push origin feat/nome-da-feature`).
 5. Abra um Pull Request.
 
 ## Licença
