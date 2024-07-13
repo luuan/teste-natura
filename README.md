@@ -47,7 +47,7 @@ Este projeto é um teste desenvolvido para a empresa Natura, consistindo em um e
 6. Inicie a aplicação:
 
     ```bash
-    npm run start:dev
+    yarn start:dev
     ```
 
 ## Estrutura do Projeto
@@ -58,12 +58,12 @@ Este projeto é um teste desenvolvido para a empresa Natura, consistindo em um e
 
 ## Scripts Disponíveis
 
-- `npm run start` - Inicia a aplicação em modo de produção.
-- `npm run start:dev` - Inicia a aplicação em modo de desenvolvimento.
-- `npm run build` - Compila a aplicação.
-- `npm run lint` - Executa o linter para verificar o código.
-- `npm run test` - Executa os testes unitários.
-- `npm run test:e2e` - Executa os testes end-to-end.
+- `yarn start` - Inicia a aplicação em modo de produção.
+- `yarn start:dev` - Inicia a aplicação em modo de desenvolvimento.
+- `yarn build` - Compila a aplicação.
+- `yarn lint` - Executa o linter para verificar o código.
+- `yarn test` - Executa os testes unitários.
+- `yarn test:e2e` - Executa os testes end-to-end.
 
 ## Documentação da API
 
