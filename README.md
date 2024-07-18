@@ -1,15 +1,15 @@
 # Natura E-commerce Test Application
 
-Este projeto é um teste desenvolvido para a empresa Natura, consistindo em um e-commerce criado utilizando NestJS, Prisma como ORM, PostgreSQL como banco de dados e Docker para a manipulação dos contêineres da aplicação.
+Este projeto é um teste desenvolvido para a empresa Natura, consistindo em um e-commerce criado utilizando NestJS, Typeorm como ORM, PostgreSQL como banco de dados e Docker em modo desenvolvimeno para a utilzação da imagem de um banco de dados.
 
 ## Tecnologias Utilizadas
 
 - [NestJS](https://nestjs.com/) - Um framework Node.js progressivo para a construção de aplicações eficientes, confiáveis e escaláveis.
-- [Prisma](https://www.prisma.io/) - Um ORM que facilita o trabalho com bancos de dados.
+- [Typeorm](https://typeorm.io/) - Um ORM que facilita o trabalho com bancos de dados.
 - [PostgreSQL](https://www.postgresql.org/) - Um sistema de gerenciamento de banco de dados relacional avançado de código aberto.
 - [Docker](https://www.docker.com/) - Plataforma de software que permite criar, testar e implantar aplicações rapidamente.
 
-## Requisitos
+## Requisitos para desenvolvimento
 
 - Node.js (versão 20 ou superior)
 - Docker
@@ -26,34 +26,28 @@ Este projeto é um teste desenvolvido para a empresa Natura, consistindo em um e
 
 2. Crie um arquivo `.env` na raiz do projeto e adicione as variáveis de ambiente necessárias. Veja o arquivo `.env.example` para referência.
 
-3. Suba os contêineres do Docker:
-
-    ```bash
-    docker-compose up -d
-    ```
-
 4. Instale as dependências do projeto:
 
     ```bash
-    npm install
+    yarn install
     ```
 
 5. Rode as migrações do Prisma para configurar o banco de dados:
 
     ```bash
-    npx prisma migrate dev
+    yarn typeorm migration:run
     ```
 
 6. Inicie a aplicação:
 
     ```bash
-    yarn start:dev
+    yarn dev
     ```
 
 ## Estrutura do Projeto
 
 - `src/` - Contém o código-fonte da aplicação.
-- `prisma/` - Contém o esquema do Prisma e as migrações do banco de dados.
+- `database/migrations` - Contém as migrações do banco de dados.
 - `docker/` - Contém os arquivos de configuração do Docker.
 
 ## Scripts Disponíveis
