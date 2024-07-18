@@ -20,8 +20,8 @@ Este projeto é um teste desenvolvido para a empresa Natura, consistindo em um e
 1. Clone o repositório:
 
     ```bash
-    git clone https://github.com/seu-usuario/natura-ecommerce.git
-    cd natura-ecommerce
+    git clone https://github.com/seu-usuario/api-natura-ecommerce.git
+    cd api-natura-ecommerce
     ```
 
 2. Crie um arquivo `.env` na raiz do projeto e adicione as variáveis de ambiente necessárias. Veja o arquivo `.env.example` para referência.

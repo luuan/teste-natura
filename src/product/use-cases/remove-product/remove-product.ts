@@ -1,7 +1,7 @@
 import { Injectable, NotFoundException } from '@nestjs/common';
 import { Equal, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
-import { Product } from 'src/product/entities/product.entity';
+import { Product } from '../../../product/entities/product.entity';
 
 @Injectable()
 export class RemoveProduct {

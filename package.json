@@ -1,5 +1,5 @@
 {
-  "name": "natura-ecommerce",
+  "name": "api-natura-ecommerce",
   "version": "0.0.1",
   "description": "Teste técnico natura",
   "author": "Luan Carlos Tomarozzi",
@@ -18,7 +18,7 @@
     "test:cov": "jest --coverage",
     "test:debug": "node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest --runInBand",
     "test:e2e": "jest --config ./test/jest-e2e.json",
-    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js -d ./src/database/database.config.ts"
+    "typeorm": "node --require ts-node/register ./node_modules/typeorm/cli.js"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",
