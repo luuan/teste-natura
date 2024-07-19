@@ -6,16 +6,16 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-  .setTitle('Teste Natura Api')
-  .setDescription('Teste Natura API description')
-  .setVersion('1.0')
-  .addTag('natura-api')
-  .build();
+    .setTitle('Teste Natura Api')
+    .setDescription('Teste Natura API description')
+    .setVersion('1.0')
+    .addTag('natura-api')
+    .build();
 
   const document = SwaggerModule.createDocument(app, config);
   SwaggerModule.setup('api', app, document);
-  
-  await app.listen(3000);
+
+  await app.listen(process.env.PORT || 3000);
   console.log('sucessfully start on port 3000');
 }
 bootstrap();
