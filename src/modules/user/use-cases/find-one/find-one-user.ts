@@ -1,12 +1,13 @@
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from '../../entities/user.entity';
+import { UserRepository } from '../../repositories';
 import { IUserRepositoryInterface } from '../../repositories/interfaces';
 
 @Injectable()
 export class FindOneUser {
   constructor(
-    @InjectRepository(User)
+    @InjectRepository(UserRepository)
     private usersRepository: IUserRepositoryInterface,
   ) {}
 
@@ -14,6 +15,6 @@ export class FindOneUser {
     username: string,
     selectSecrets: boolean = false,
   ): Promise<User> {
-    return this.usersRepository.findOneUser(username, selectSecrets)
+    return this.usersRepository.findOneUser(username, selectSecrets);
   }
 }

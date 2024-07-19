@@ -11,22 +11,24 @@ export class ProductRepository
   implements IProductRepositoryInterface
 {
   constructor(private dataSource: DataSource) {
-    super(Product, dataSource.createEntityManager())
+    super(Product, dataSource.createEntityManager());
   }
 
   async createProduct(createProductDto: CreateProductDto): Promise<Product> {
     return await this.save(createProductDto);
   }
   async findAllProduct(): Promise<Product[]> {
-    return await this.find({select:[
-      "id",
-      "name",
-      "price",
-      "url",
-      "description", 
-      "createdAt", 
-      "updatedAt"
-    ]})
+    return await this.find({
+      select: [
+        'id',
+        'name',
+        'price',
+        'url',
+        'description',
+        'createdAt',
+        'updatedAt',
+      ],
+    });
   }
 
   async findOneProduct(id: number): Promise<Product> {
@@ -59,7 +61,7 @@ export class ProductRepository
       ...updateProductDto,
     });
   }
-  
+
   async removeProduct(id: number) {
     const productToDelete = await this.exists({
       where: { id: Equal(id) },

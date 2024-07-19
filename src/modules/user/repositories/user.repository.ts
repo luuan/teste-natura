@@ -12,9 +12,8 @@ export class UserRepository
   implements IUserRepositoryInterface
 {
   constructor(private dataSource: DataSource) {
-    super(User, dataSource.createEntityManager())
+    super(User, dataSource.createEntityManager());
   }
-
   async createUser(createUserDto: CreateUserDto): Promise<User> {
     const { username, password, name } = createUserDto;
 
@@ -33,15 +32,14 @@ export class UserRepository
     return newUser;
   }
   async findManyUser(): Promise<User[]> {
-    return await this.find({select:[
-      "id",
-      "name",
-      "createdAt", 
-      "updatedAt"
-    ]})
+    return await this.find({
+      select: ['id', 'name', 'createdAt', 'updatedAt'],
+    });
   }
-  async findOneUser(username: string,
-    selectSecrets: boolean = false): Promise<User> {
+  async findOneUser(
+    username: string,
+    selectSecrets: boolean = false,
+  ): Promise<User> {
     return this.findOne({
       where: { username },
       select: {
@@ -53,5 +51,4 @@ export class UserRepository
       },
     });
   }
-
 }
