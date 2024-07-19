@@ -34,8 +34,24 @@ Este projeto é um teste desenvolvido para a empresa Natura, consistindo em um e
 
 5. Rode as migrações do Prisma para configurar o banco de dados:
 
+    Gerar Migrações automáticas a partir das entidades modificadas.
     ```bash
-    yarn typeorm migration:run
+        yarn typeorm migration:generate src/database/migrations/nome_da_migration -d src/database/database.config.ts
+    ```
+
+      Rodar Migrações.
+    ```bash
+        yarn typeorm migration:run -d src/database/database.config.ts
+    ```
+
+      Reverter Migrações.
+    ```bash
+        yarn typeorm migration:generate src/database/migrations/nome_da_migration -d src/database/database.config.ts
+    ```
+
+      Criar Migrações Vazias.
+    ```bash
+        yarn typeorm migration:generate src/database/migrations/nome_da_migration -d src/database/database.config.ts
     ```
 
 6. Inicie a aplicação:
